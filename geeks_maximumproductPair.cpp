@@ -14,16 +14,28 @@ typedef pair< int ,int > pii;
     freopen("input.txt", "r", stdin); \
     freopen("output.txt", "w", stdout);
 #define FIO ios_base::sync_with_stdio(false);cin.tie(NULL);cout.tie(NULL);
- solve(){
-}
+//  solve(){
+// }
 int main() 
 {
 OJ;
 FIO
- int i,j,t,x,y,a,b;
+ int i,j,t,x,y,a,b,n;
 cin>>t;
  while(t--)
- solve()
+ {
+     cin>>n;
+     int a[n];
+     fo(i,n)
+     {
+         cin>>a[i];
+     }
+     sort(a,a+n);
+    uint64_t res=a[0]*a[1];
+     cout<<a[0]<<a[1];
+     cout<<res<<endl;
+
+ }
  
  
 return 0;
