@@ -37,26 +37,18 @@ return 0;
 }
 int transitionPoint(int arr[], int n) {
     // code here
-    int l=n-1;
-    int f=0;
-    int mid;
-    while(f<=l)
-    {
-        mid=(l+f)/2;
-        cout<<mid<<"m";
-        if(arr[mid]>arr[mid-1])
-        return mid;
-        else if(arr[mid+1]>arr[mid])
-        return mid+1;
-        else if((arr[mid-1]==1)&&(arr[mid]==1))
-        l=mid-1;
-        else
-        f=mid+1;
-    
-        
-    }
-    cout<<"\n"<<mid;
-    //if (arr[mid]==1)return 1;
-    //else 
-    return -1;
+     int l=0,h=n-1,mid;
+while(l<=h){
+mid=(l+h)/2;
+if((arr[mid]==0) && (arr[mid+1]==1))
+return mid+1;
+else if((arr[mid]==1) && (arr[mid-1]==0))
+return mid;
+else if((arr[mid]==1) && (arr[mid-1]==1))
+h=mid;
+else
+l=mid+1;
+}
+return -1;
+
 }
